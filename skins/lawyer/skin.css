@@ -1,0 +1,27 @@
+/* Skin-specific styles
+----------------------- */
+div.wpcf7-validation-sucsses,
+div.wpcf7-mail-sent-ok {
+  border: 2px solid #2c2c39;
+}
+
+.trx_addons_message_box_sucsses {
+  border: 2px solid #2c2c39;
+}
+
+span.wpcf7-not-valid-tip {
+  color: #dfbd76;
+}
+
+div.wpcf7-mail-sent-ng,
+div.wpcf7-aborted,
+div.wpcf7-validation-errors,
+div.wpcf7-acceptance-missing {
+  border: 2px solid #dfbd76;
+}
+
+.trx_addons_message_box_error {
+  border: 2px solid #dfbd76;
+}
+
+/*# sourceMappingURL=skin.css.map */

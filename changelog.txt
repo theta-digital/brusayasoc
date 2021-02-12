@@ -1,0 +1,29 @@
+Version 1.0.4
+	Fixed:
+		- Improve theme styles
+		- Update plugins to their latest versions
+
+Version 1.0.3
+	Fixed:
+	    - Themerex Addons vulnarability fixed
+
+
+Version 1.0.2
+    	Added:
+    		- Compatibility with WP 5.3
+    		- Compatibility with PHP7.3.3
+            - Compatibility with ThemeREX Updater
+
+        Fixed:
+            - Scripts libraries updated
+            - Update plugins to their latest versions
+
+        Changed:
+    		- Update demo data
+
+Version 1.0.1
+    Fixed:
+    - Update plugins to their latest versions
+    - Compatibility with Elementor 2.5.3
+
+Version 1.0.0(21.0.50)

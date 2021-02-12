@@ -1,0 +1,128 @@
+<?php
+// Add skin-specific colors and fonts to the custom CSS
+if ( ! function_exists( 'justitia_skin_get_css' ) ) {
+	add_filter( 'justitia_filter_get_css', 'justitia_skin_get_css', 10, 2 );
+	function justitia_skin_get_css( $css, $args ) {
+
+		if ( isset( $css['fonts'] ) && isset( $args['fonts'] ) ) {
+			$fonts         = $args['fonts'];
+			$css['fonts'] .= <<<CSS
+			
+			.sc_googlemap_wrap ul.trx_addons_list_custom li .subtitle {
+                {$fonts['p_font-family']}
+            }
+
+            .sc_services.sc_services_numbered .sc_services_item .sc_services_item_info .sc_services_item_content ul li {
+                {$fonts['h5_font-family']}
+            }
+
+CSS;
+		}
+
+		if ( isset( $css['vars'] ) && isset( $args['vars'] ) ) {
+			$vars         = $args['vars'];
+			$css['vars'] .= <<<CSS
+
+CSS;
+		}
+
+		if ( isset( $css['colors'] ) && isset( $args['colors'] ) ) {
+			$colors         = $args['colors'];
+			$css['colors'] .= <<<CSS
+			
+			/* Submenu */
+            .sc_layouts_menu_popup .sc_layouts_menu_nav,
+            .sc_layouts_menu_nav > li ul {
+                background-color: {$colors['extra_bg_color']};
+            }
+            .widget_nav_menu li.menu-delimiter,
+            .sc_layouts_menu_nav > li li.menu-delimiter {
+                border-color: {$colors['extra_bd_color']};
+            }
+            .sc_layouts_menu_popup .sc_layouts_menu_nav > li > a,
+            .sc_layouts_menu_nav > li li > a {
+                color: {$colors['inverse_text']} !important;
+            }
+            .sc_layouts_menu_popup .sc_layouts_menu_nav > li > a:hover,
+            .sc_layouts_menu_popup .sc_layouts_menu_nav > li.sfHover > a,
+            .sc_layouts_menu_nav > li li > a:hover,
+            .sc_layouts_menu_nav > li li.sfHover > a {
+                color: {$colors['text_dark']} !important;
+            }
+            .sc_layouts_menu_nav > li li > a:hover:after {
+                color: {$colors['text_dark']} !important;
+            }
+            .sc_layouts_menu_nav li[class*="columns-"] li.menu-item-has-children > a:hover,
+            .sc_layouts_menu_nav li[class*="columns-"] li.menu-item-has-children.sfHover > a {
+                color: {$colors['extra_hover']} !important;
+                background-color: transparent;
+            }
+            .sc_layouts_menu_nav > li li[class*="icon-"]:before {
+                color: {$colors['extra_hover']};
+            }
+            .sc_layouts_menu_nav > li li[class*="icon-"]:hover:before,
+            .sc_layouts_menu_nav > li li[class*="icon-"].shHover:before {
+                color: {$colors['extra_hover']};
+            }
+            .sc_layouts_menu_nav > li li.current-menu-item > a,
+            .sc_layouts_menu_nav > li li.current-menu-parent > a,
+            .sc_layouts_menu_nav > li li.current-menu-ancestor > a {
+                color: {$colors['text_dark']} !important;
+            }
+            .sc_layouts_menu_nav > li li.current-menu-item:before,
+            .sc_layouts_menu_nav > li li.current-menu-parent:before,
+            .sc_layouts_menu_nav > li li.current-menu-ancestor:before {
+                color: {$colors['text_dark']} !important;
+            }
+            nav .sc_layouts_menu_nav > li > ul:before {
+                border-color: {$colors['extra_bg_color']};
+            }
+
+            /* custom list with icon */
+            .sc_googlemap_wrap ul.trx_addons_list_custom li .subtitle {
+                color: {$colors['text_light']};
+            }
+            .sc_googlemap_wrap ul.trx_addons_list_custom li .icon_mail,
+            .sc_googlemap_wrap ul.trx_addons_list_custom li .icon_phone,
+            .sc_googlemap_wrap ul.trx_addons_list_custom li .icon_map {
+                color: {$colors['text_link']};
+            }
+
+            /* Services */
+            .sc_services.sc_services_numbered .sc_services_item .sc_services_item_info .sc_services_item_content ul li {
+                border-color: {$colors['bd_color']};
+            }
+            .scheme_self.sc_team_short .socials_wrap .social_item .social_icon {
+                background-color: {$colors['bg_color']};
+                color: {$colors['text_light']};   
+            }
+            .scheme_self.sc_team_short .socials_wrap .social_item .social_icon:hover {
+                background-color: {$colors['bg_color']};
+                color: {$colors['text_dark']};   
+            }
+
+            .scheme_self.footer_wrap a,
+            .footer_wrap .scheme_self.vc_row a {
+                color: {$colors['text_link']} !important;
+            }
+            .scheme_self .footer_wrap a:hover,
+            .footer_wrap .scheme_self.vc_row a:hover {
+                color: {$colors['text_dark']} !important;
+            }
+            .footer_wrap .scheme_self a:hover {
+                color: {$colors['text_dark']} !important;
+            }
+            .scheme_self.footer_wrap .copyright_text a {
+                color: {$colors['text']} !important; 
+            }
+            .scheme_self.footer_wrap .copyright_text a:hover {
+                color: {$colors['text_dark']} !important; 
+            }
+
+CSS;
+		}
+
+		return $css;
+	}
+}
+

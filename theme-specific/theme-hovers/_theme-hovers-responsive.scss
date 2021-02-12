@@ -1,0 +1,49 @@
+@mixin theme-hovers--lg() {
+	.post_featured.hover_border .post_info .post_title {
+		font-size: 0.8em;
+		padding: 0 0 0;
+	}
+	.post_featured.hover_border .post_info:before,
+	.post_featured.hover_border .post_info:after {
+		@include abs-pos(10px, 10px, 10px, 10px, '');
+	}
+}
+
+@mixin theme-hovers--md() {
+	.post_featured.hover_border .post_info .post_title,
+	.portfolio_4 .post_featured.hover_border .post_info .post_title{
+		font-size: 1em;
+		padding: 0 0 15px;
+	}
+	.post_featured.hover_border .post_info:before,
+	.post_featured.hover_border .post_info:after,
+	.portfolio_4 .post_featured.hover_border .post_info:before,
+	.portfolio_4 .post_featured.hover_border .post_info:after{
+		@include abs-pos(20px, 20px, 20px, 20px, '');
+	}
+}
+
+@mixin theme-hovers--xs() {
+	/* Theme Hovers */
+	.post_featured.hover_border .post_info .post_info_back	{
+		padding: 2.5em;
+	}
+	.portfolio_4 .post_featured.hover_border .post_info .post_info_back	{
+		padding: 1.5em;
+	}
+	.post_featured.hover_border .post_info:before,
+	.post_featured.hover_border .post_info:after {
+		@include abs-pos(20px, 20px, 20px, 20px);
+	}
+	.post_featured.hover_border .post_info .post_title {
+		padding-bottom: 4px;
+	}
+	.portfolio_4 .post_featured.hover_border .post_info .post_title{
+		padding: 0 0 0;
+	}
+	.portfolio_4 .post_featured.hover_border .post_info:before,
+	.portfolio_4 .post_featured.hover_border .post_info:after{
+		@include abs-pos(10px, 10px, 10px, 10px, '');
+	}
+
+}

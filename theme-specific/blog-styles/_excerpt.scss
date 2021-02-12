@@ -1,0 +1,103 @@
+/* Blog layout: Excerpt 
+------------------------- */
+.post_layout_excerpt {
+	position:relative;
+	margin-bottom:0;
+}
+.post_layout_excerpt:not(.sticky) {
+	position:relative;
+	margin-bottom:0;
+}
+.post_layout_excerpt + .post_layout_excerpt {
+	margin-top: 3.9rem;
+	&:last-child {
+		padding-bottom: 3.9rem;
+		border-bottom: 2px solid;
+	}
+}
+.post_layout_excerpt:not(.sticky) + .post_layout_excerpt {
+	padding-top: 3.9rem;
+	border-top: 2px solid;
+}
+.post_featured,
+.post_featured.hover_icon,
+.post_featured.hover_icons {
+	margin-bottom: 1.1rem;
+}
+.format-audio .post_featured {
+	margin-bottom: 2.8rem;
+}
+.post_layout_excerpt.post_format_quote {
+	blockquote {
+		margin-bottom: 0;
+	}
+}
+.post_layout_excerpt.sticky {
+	padding: 4.2em 3.5em 4.8em 4.3em;
+	border: none;
+	position: relative;
+	&:before {
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+		pointer-events: none;
+	}
+}
+
+.post_layout_excerpt .post_featured {
+	display: inline-block;
+}
+/*.post_layout_excerpt.post_format_audio .post_featured,*/
+.post_layout_excerpt.post_format_audio .post_featured.without_thumb,
+.post_layout_excerpt.post_format_gallery .post_featured.without_thumb {
+	display:block;
+}
+.post_layout_excerpt .post_header {
+	margin: 0;
+	position:relative;
+}
+.post_layout_excerpt .post_header .post_price {
+	width: auto;
+	@include abs-rt;
+	@include font(2.5em, 1.5em);
+}
+.post_layout_excerpt .post_title {
+	margin: 0;
+	font-size: 2.1rem;
+	line-height: 1.2em;
+}
+.post_layout_excerpt .post_meta {
+	margin-top: 0;
+
+}
+.post_layout_excerpt .post_header + .post_content {
+	margin-top: 0.75rem;
+}
+.post_layout_excerpt .post_content {
+	position: relative;
+	display: block;
+  .post_content_inner {
+    p {
+      font-size: 0.95rem;
+    }
+  }
+  .more-link {
+    font-size: 14px;
+	padding: 1.3em 2.2em 1.45em 2.2em;
+  }
+}
+
+// First post large in the Classic and Masonry
+body[class*="blog_style_classic"] .post_layout_excerpt,
+body[class*="blog_style_masonry"] .post_layout_excerpt {
+	margin-bottom: 3em;
+}
+
+
+//copyright|home_bg_1_vagabonds.jpg|breabcrumbs_bg_2.jpg|about_bg1.jpg|overimage_video.jpg|featured_video.jpg|slider_|slider-|_slider
+//
+//map2-copyright.png|map1.png

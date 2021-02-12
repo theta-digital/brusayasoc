@@ -1,0 +1,154 @@
+@import "../../css/_mixins.scss";
+@import "../../css/_theme-vars.scss";
+
+/* Skin-specific styles
+----------------------- */
+/* Buttons */
+.elementor-button {
+  &.elementor-size-md {
+    padding: 1.7em 2.6em 1.75em 2.6em;
+  }
+}
+
+/* Player */
+.elementor-custom-embed-play .eicon-play {
+  line-height: 3.55rem;
+  &:before {
+    font-size: 22px;
+  }
+}
+
+/* Layouts */
+
+// Title
+.sc_layouts_title_caption {
+  img {
+    display: none;
+  }
+}
+
+/* Custom list */
+.sc_googlemap_wrap {
+  ul.trx_addons_list_custom {
+    li {
+      position: relative;
+      padding: 0.7rem 0.5rem 0.7em 2.7em;
+      &:first-child {
+        padding-top: 0.7rem;
+      }
+      &:last-child {
+        padding-bottom: 0.7rem;
+      }
+      .subtitle {
+        display: block;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 15px;
+        padding-bottom: 2px;
+      }
+      .icon_mail,
+      .icon_phone,
+      .icon_map {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        &:before {
+          font-family: $theme_icons;
+          font-size: 1.8rem;
+          line-height: 1em;
+        }
+      }
+      .icon_map {
+        &:before {
+          content: '\E9B6';
+        }
+      }
+      .icon_phone {
+        &:before {
+          content: '\E9B5';
+        }
+      }
+      .icon_mail {
+        &:before {
+          content: '\E9B7';
+        }
+      }
+    }
+  }
+}
+/* Services */
+.sc_services {
+  &.sc_services_numbered {
+    .sc_services_item {
+      padding: 4.4rem 2.3rem 3.9rem 4.1rem !important;
+      .sc_services_item_number {
+        top: 4.1rem !important;
+        right: 3.8rem !important;
+        transform: none !important;
+      }
+      .sc_services_item_info {
+        .sc_services_item_content {
+          ul {
+            padding-left: 0 !important;
+            padding-top: 4rem !important;
+          }
+        }
+      }
+      + .sc_services_item {
+        margin-top: $grid_gap;
+      }
+      &.without_content {
+        .sc_services_item_number {
+          top: 50% !important;
+          right: 2rem !important;
+          transform: translateY(-50%) !important;
+        }
+      }
+    }
+    .trx_addons_column-1_2 {
+      .sc_services_item {
+        padding: 2.7rem 2.3rem 1.4rem 2.3rem !important;
+        .sc_services_item_number {
+          top: 50% !important;
+          right: 2rem !important;
+          transform: translateY(-50%) !important;
+        }
+        &.with_content {
+          .sc_services_item_number {
+            top: 2rem !important;
+            right: 2rem !important;
+            transform: none !important;
+          }
+        }
+      }
+    }
+  }
+  &.sc_services_default {
+    &.sc_services_featured_left {
+      .sc_services_item {
+        .sc_services_item_icon {
+          width: 3.9em !important;
+          height: 3.9em !important;
+          line-height: 3.9em !important;
+        }
+        .sc_services_item_info {
+          padding-top: 0 !important;
+          margin-left: 9.5rem !important;
+          .sc_services_item_content {
+            p {
+              margin-bottom: 1.3em !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+div.wpcf7-validation-sucsses,
+div.wpcf7-mail-sent-ok {
+  border: 2px solid #3aae68;
+}
+.trx_addons_message_box_sucsses {
+  border: 2px solid #3aae68;
+}
